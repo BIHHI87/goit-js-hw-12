@@ -126,6 +126,7 @@ const onSearchFormSubmit = async event =>{
 
           loadMoreBtnEl.classList.remove('is-hidden');
         } else {
+          loadMoreBtnEl.removeEventListener('click', onLoadMorePress);
           iziToast.info({
             message: "We're sorry, but you've reached the end of search results.",
             position: 'topRight',
